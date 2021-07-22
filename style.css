@@ -1,0 +1,17 @@
+/* General Settings */
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'Greek';
+    src: url(font/Marav2.ttf);
+}
+
+#logo {
+    font: 4rem 'Greek', serif;
+}
+
