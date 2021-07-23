@@ -21,7 +21,7 @@
     --cor1: #8C8668;
     --cor2: #F2CA7E;
     --cor3: #A65A2E;
-    --cor4: #400601;
+    --cor4: rgba(64, 6, 1, 0.85);
 }
 
 /* Header */
@@ -57,3 +57,27 @@
 }
 
 /* Main */
+
+main {
+    background-color: var(--cor4);
+}
+
+.grid {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    width: 50%;
+    margin: auto;
+}
+
+.img-philosophers {
+    border-radius: 50%;
+    width: 50%;
+    grid-area: 1/1/1/2;
+    margin: 0.5em;
+    border: 1px solid black;
+}
+
+.p-philosophers {
+    grid-area: 1/2/2/2;
+    border: 1px solid black;
+}
