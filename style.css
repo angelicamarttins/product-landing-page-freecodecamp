@@ -1,17 +1,59 @@
 /* General Settings */
 
-* {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-}
+@import url('https://fonts.googleapis.com/css2?family=Zen+Loop:ital@0;1&display=swap');
 
 @font-face {
     font-family: 'Greek';
     src: url(font/Marav2.ttf);
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Zen Loop', cursive;
+    font-weight: bold;
+    list-style: none;
+}
+
+:root {
+    --cor0: #89ABD9;
+    --cor1: #8C8668;
+    --cor2: #F2CA7E;
+    --cor3: #A65A2E;
+    --cor4: #400601;
+}
+
+/* Header */
+
+#header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cor1);
+    padding: 0 1em;
+}
+
+#header-img {
+    padding: 1em 0;
+}
+
 #logo {
     font: 4rem 'Greek', serif;
 }
 
+/* Menu */
+
+#nav-bar > ul {
+    display: flex;
+}
+
+.nav-link {
+    color: black;
+    display: block;
+    padding: 0.75em;
+    font-size: 1.25rem;
+}
+
+/* Main */
