@@ -12,6 +12,7 @@
     padding: 0;
     text-decoration: none;
     font-family: 'Zen Loop', cursive;
+    color: var(--cor2);
     font-weight: bold;
     list-style: none;
 }
@@ -41,12 +42,16 @@
 
 #logo {
     font: 4rem 'Greek', serif;
+    color: black;
 }
 
 /* Menu */
 
 #nav-bar > ul {
     display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-link {
@@ -58,26 +63,37 @@
 
 /* Main */
 
-main {
+.main {
     background-color: var(--cor4);
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+/* Philosophers */
+
+.grid-section {
+    width: 90%;
+    margin: 2em auto;
 }
 
 .grid {
     display: grid;
-    grid-template-rows: 50% 50%;
-    width: 50%;
-    margin: auto;
+    grid-template-rows: 10% 50% 25%;
+    grid-template-columns: 25% 75%;
+    margin: 1em 0;
 }
 
 .img-philosophers {
     border-radius: 50%;
     width: 50%;
-    grid-area: 1/1/1/2;
-    margin: 0.5em;
-    border: 1px solid black;
+    grid-area: 1/1/2/2;
+    margin: 0.5em 0;
 }
 
 .p-philosophers {
-    grid-area: 1/2/2/2;
-    border: 1px solid black;
+    grid-area: 2/2/3/2;
+    text-align: justify;
+    font-size: 1.25rem;
 }
+
+/* Video */
