@@ -17,6 +17,10 @@
     list-style: none;
 }
 
+body {
+    background-color: var(--cor4);
+}
+
 :root {
     --cor0: #89ABD9;
     --cor1: #8C8668;
@@ -30,7 +34,6 @@
     display: block;
     margin: 0 auto;
     padding: 0.75;
-    /* border: 1px solid yellow; */
 }
 
 /* Header */
@@ -38,11 +41,15 @@
 #header {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background-color: var(--cor1);
+    margin: 0;
     padding: 0 1em;
-    position: sticky;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     max-width: 100%;
 }
 
@@ -74,10 +81,7 @@
 /* Main */
 
 .main {
-    background-color: var(--cor4);
-    padding: 1em;
-    box-sizing: border-box;
-    /* position: relative; */
+    padding-top: 20em;
 }
 
 /* Philosophers */
@@ -85,20 +89,17 @@
 .flex-section {
     width: 95%;
     margin: auto;
-    /* border: 1px solid yellow; */
 }
 
 .flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: 1px solid yellow; */
 }
 
 #title {
     text-align: center;
     margin: 1em 0;
-    /* border: 1px solid yellow; */
 }
 
 .img-philosophers {
@@ -119,7 +120,6 @@
     margin: 1em auto;
     padding: 1em;
     box-sizing: border-box;
-    /* border: 1px solid yellow; */
 }
 
 #video {
@@ -140,15 +140,15 @@
     justify-content: space-between;
     align-items: center;
     width: 95%;
-    margin: auto;
-    border: 1px solid yellow;
+    margin: 1em auto;
 }
 
 .products {
     border: 1px solid var(--cor4);
     border-radius: 5px;
-    margin: 1em;
     box-shadow: 0 0 10px var(--cor4);
+    margin: 1em;
+    min-width: 55%;
 }
 
 .title-product {
@@ -159,6 +159,7 @@
 
 .msg-product {
     padding: 1em;
+    text-align: center;
 }
 
 .buy-btn {
@@ -172,10 +173,116 @@
     cursor: pointer;
 }
 
-/* .buy-btn a strong{
-    color: var(--cor4);
-} */
-
-.buy-btn:hover {
+.buy-btn:hover, 
+#submit:hover {
     background-color: var(--cor0);
+}
+
+/* Form */
+
+#form {
+    width: 95%;
+    text-align: center;
+    margin: 1.5em auto;
+}
+
+#form > p {
+    margin: 0.5em;
+}
+
+#form > input[type="text"],
+#form > input[type="email"] {
+    margin: 0.25em;
+    color: var(--cor3);
+    border-radius: 2px;
+    border: none;
+    padding-left: 0.25em;
+}
+
+#submit {
+    width: 25%;
+    background-color: rgba(137, 170, 217, 0.9);
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 0.2em;
+    margin: 0.75em;
+    color: var(--cor2);
+}
+
+/* Footer */
+
+#footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: var(--cor1);
+}
+
+#footer a {
+    text-shadow: 1px 2px 10px var(--cor4);
+}
+
+/* Media Query */
+
+@media (min-width: 500px) {
+    .flex-section,
+    .video-section,
+    .container-products,
+    #form {
+        width: 75%; 
+    }
+
+    .main {
+        padding-top: 16em;
+    }
+}
+
+@media (min-width: 750px) {
+    .flex-section,
+    .video-section,
+    .container-products,
+    #form {
+        width: 65%; 
+    }
+
+    .main {
+        padding-top: 15em;
+    }
+}
+
+@media (min-width: 1000px) {
+    .flex-section,
+    .video-section,
+    .container-products,
+    #form {
+        width: 55%; 
+    }
+}
+
+@media (min-width: 1250px) {
+    * {
+        font-size: 1.5rem;
+    }
+
+    .flex-section,
+    .video-section,
+    .container-products,
+    #form {
+        width: 35%; 
+    }
+}
+
+@media (min-width: 2000px) {
+    * {
+        font-size: 2rem;
+    }
+
+    .flex-section,
+    .video-section,
+    .container-products,
+    #form {
+        width: 25%; 
+    }
 }
