@@ -60,6 +60,7 @@ body {
 #logo {
     font: 4rem 'Greek', serif;
     color: black;
+    text-align: center;
 }
 
 /* Menu */
@@ -86,7 +87,7 @@ body {
 
 /* Philosophers */
 
-.flex-section {
+#philosophers {
     width: 95%;
     margin: auto;
 }
@@ -115,7 +116,7 @@ body {
 
 /* Video */
 
-.video-section {
+#know-more {
     width: 95%;
     margin: 1em auto;
     padding: 1em;
@@ -133,8 +134,7 @@ body {
 }
 
 /* Product - Courses */
-
-.container-products {
+#crash-course {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -227,9 +227,9 @@ body {
 /* Media Query */
 
 @media (min-width: 500px) {
-    .flex-section,
-    .video-section,
-    .container-products,
+    #philosophers,
+    #know-more,
+    #crash-course,
     #form {
         width: 75%; 
     }
@@ -240,24 +240,37 @@ body {
 }
 
 @media (min-width: 750px) {
-    .flex-section,
-    .video-section,
-    .container-products,
+    #philosophers,
+    #know-more,
+    #crash-course,
     #form {
         width: 65%; 
     }
 
     .main {
-        padding-top: 15em;
+        padding-top: 10em;
+    }
+
+    #header {
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
 
 @media (min-width: 1000px) {
-    .flex-section,
-    .video-section,
-    .container-products,
+    #philosophers,
+    #know-more,
+    #crash-course,
     #form {
         width: 55%; 
+    }
+
+    #logo {
+        margin-left: 2em;
+    }
+
+    .main {
+        padding-top: 7em;
     }
 }
 
@@ -266,9 +279,17 @@ body {
         font-size: 1.5rem;
     }
 
-    .flex-section,
-    .video-section,
-    .container-products,
+    #logo {
+        margin-left: 3em;
+    }
+
+    .main {
+        padding-top: 5em;
+    }
+
+    #philosophers,
+    #know-more,
+    #crash-course,
     #form {
         width: 35%; 
     }
@@ -279,9 +300,13 @@ body {
         font-size: 2rem;
     }
 
-    .flex-section,
-    .video-section,
-    .container-products,
+    #logo {
+        margin-left: 4.5em;
+    }
+
+    #philosophers,
+    #know-more,
+    #crash-course,
     #form {
         width: 25%; 
     }
